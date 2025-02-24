@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Redirector</title>
+</head>
+<body>
+    <h2>Enter Code</h2>
+    <input type="text" id="codeInput" placeholder="Enter code">
+    <button onclick="redirect()">Go</button>
+
+    <script>
+        function redirect() {
+            let code = encodeURIComponent(document.getElementById('codeInput').value);
+            let url = `https://www.gimkit.com/join?gc=${code}`; // Replace with your target website
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
